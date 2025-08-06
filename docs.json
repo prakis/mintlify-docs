@@ -17,8 +17,14 @@
             "group": "Common Datastructures",
             "pages": [
               "index",
-              "Arrays",
-              "LinkedLists"
+              "array",
+              "hashmap",
+              "linkedlist",
+              "stack",
+              "queue",
+              "heap",
+              "tree",
+              "graph"
             ]
           },
           {
