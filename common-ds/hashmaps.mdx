@@ -1,5 +1,64 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: "HashMap (Dictionary)"
+description: "A hash map (also known as a hash table, dictionary, or associative array) is a data structure that stores data in key-value pairs. Think of it like a real-world dictionary where a word (the key) is used to look up its definition (the value)."
 ---
 
+Think of it like a **real-life dictionary**:
+
+- You look up a **word (key)** and get its **definition (value)**
+- You don’t go page by page — you jump directly to the word, thanks to indexing (like hashing)
+
+The core of a hash map is a **hash function**, which takes the key as input and computes an integer, called a **hash code** or **hash**. This hash code is then used as an index to find the correct location (or "bucket") in an underlying array where the key-value pair is stored. This allows for extremely fast lookups, insertions, and deletions, regardless of the size of the data.
+
+<img
+  src="/images/hash.png"
+  alt="Hash Pn"
+  title="Hash Pn"
+  className="mx-auto"
+  style={{ width:"84%" }}
+/>
+
+The main advantage of hash maps is their average **O(1)** time complexity for these operations, meaning the time it takes doesn't grow with the number of elements.
+
+**Implementing Dictionaries in Programming Languages**: In Python, the `dict` data type is a highly optimized hash map implementation. Other languages like Java, C\+\+, and JavaScript also have built-in hash map structures (`HashMap`, `unordered_map`, and `Object`/`Map` respectively).
+
+**Storing Unique Values**: Hash maps can be used to efficiently store unique elements, as each key in a hash map must be unique. This makes them useful for tasks like removing duplicate items from a list.
+
+| Feature          |                                                                                                    |
+| :--------------- | :------------------------------------------------------------------------------------------------- |
+| Fast Lookup      | O(1) average time to access data by key                                                            |
+| Flexible Keys    | Keys can be strings, numbers, or tuples (Keys must be unique)                                      |
+| Dynamic Size     | Grows as needed                                                                                    |
+| Built-in Support | Available in almost all languages (e.g., `dict` in Python, `Map` in JavaScript, `HashMap` in Java) |
+
+```python
+# Create a HashMap using a dictionary
+user_info = {
+    "ada": "ada@gmail.com",
+    "einstein": "einstein@gmail.com",
+    "newton": "newton@gmail.com",
+	"curie":"curie@gmail.com"
+}
+
+# Accessing data by key
+print(user_info["bob"])  # Output: bob@example.com
+
+# Adding a new key-value pair
+user_info["diana"] = "diana@example.com"
+
+# Updating a value
+user_info["alice"] = "newalice@example.com"
+
+# Deleting a key
+del user_info["charlie"]
+
+# Printing the final HashMap
+print(user_info)
+```
+
+### Use Cases
+
+1. **Fast Data Lookups**: Hash maps are ideal for situations where you need to retrieve a value based on a specific key very quickly. For example, a phone book application where you want to find a person's number using their name, or a user database where you want to retrieve a user's profile using their username.
+2. **Counting Frequencies**: You can use a hash map to count the occurrences of items in a list. The item itself becomes the key, and its count becomes the value. For instance, counting the frequency of each word in a document.
+
+https://en.wikipedia.org/wiki/Hash_table

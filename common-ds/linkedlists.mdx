@@ -1,34 +1,39 @@
 ---
-title: "Arrays"
-description: "An array is one of the simplest and most commonly used data structures in programming. It stores a list of items in a specific order, and each item can be quickly accessed using its position (called an index). When you're starting out in programming, one of the first data structures you'll meet is the array. It’s simple, powerful, and used everywhere — from managing scores in a game to storing user data in a web app. But what exactly is an array?"
+title: "LinkedList"
+description: "A linked list is a linear data structure where elements are not stored in contiguous memory locations."
 ---
 
-### What is an Array?
+**Analogy:** Imagine a treasure hunt where each clue tells you where to find the next clue. You can't just skip to the end; you must follow the clues in order.
 
-An **array** is a **collection of elements stored at contiguous memory locations**. Think of it as a row of lockers, where each locker (position) holds one item (value), and every locker has a number (index) that helps you find what's inside.
+A linked list is a linear data structure where elements are not stored in contiguous memory locations. Instead, each element, called a **node**, contains two parts:
 
-- All elements are of the **same data type**
-- You can access any element instantly using its index
-- Arrays are **fixed in size** (in most languages)
+1. **Data**: The actual value stored in the node.
+2. **Next**: A link, or call it a pointer to the next node in the sequence.
 
-Few examples of Arrays are a music app playlist stores songs in a specific order,  Items in shopping cart.
+Unlike arrays, linked lists don’t store elements in contiguous memory locations. Instead, each node "points" to the next, forming a **chain**.
 
-### Fruits Array
+The list starts with a **head** node, which is the first node. The last node in the list points to `None`, signifying the end of the list.
 
-Let’s say you want to store a list of your favorite fruits in a program. You can use an array to keep them organized and easily accessible.
+Unlike an array, you can't access an element in a linked list by its index (e.g., `list[3]`). To find an element, you must traverse the list from the `head` node, following the `next` pointers until you reach the desired node.
 
-```python
-fruits = ["apple", "banana", "mango", "orange"]
+Think of a slideshow where each slide has a **"Next"** button to go to the following slide. You can only move **one step at a time**, from the current slide to the next. 
 
-print( fruits[0] )  # Output: apple
-print( fruits[2] )  # Output: mango
-```
+This is very similar to a **linked list**:
 
-  In this example, the array `fruits` holds four string values. Each fruit is stored at a specific index:
+- Each **slide** is like a **node**.
+- The **"Next"** button acts like a **pointer (slide-id)** to the next node.
+- The **first slide** is the **head** of the list.
+- The **last slide** doesn’t link to any other, tail or null .
+- If there's a **"Previous"** button, it's like a **doubly linked list**.
 
-- `fruits[0]` is `"apple"`
-- `fruits[1]` is `"banana"`
-- `fruits[2]` is `"mango"`
-- `fruits[3]` is `"orange"`
+![Linkedlist2 Pn](/images/linkedlist2.png)
 
-An array stores elements in a **specific order**, and each item can be accessed using its **index** — starting from 0. In the `fruits` array, if you want the third fruit, you simply use `fruits[2]`. This makes arrays ideal for situations where you need to organize and retrieve items quickly using their position in a list. Arrays are efficient, easy to use, and form the backbone of many other data structures.
+### Use Cases
+
+1. **Implementing other data structures:** Linked lists are the building blocks for more complex data structures like stacks, queues, and hash maps.
+2. **Dynamic memory allocation:** They are efficient for scenarios where you don't know the size of the data in advance, as they can grow or shrink dynamically.
+3. **Managing a playlist:** A music playlist is a great example. You can easily add a new song to the end or remove a song from the middle without shifting the entire list of songs.
+
+https://en.wikipedia.org/wiki/Linked_list
+
+https://www.freecodecamp.org/news/how-linked-lists-work/

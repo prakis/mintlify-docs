@@ -1,5 +1,58 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: "Queue"
+description: "A queue is a linear data structure that follows the First-In, First-Out (FIFO) principle. This means the first element added is the first one to be removed."
 ---
 
+### Analogy: People in a Line
+
+Think of a queue at:
+
+- A bus stop
+- A ticket counter
+- A fast food restaurant
+
+The **first person to arrive** is the **first to be served**, and **new people join at the end** of the line.
+
+In a queue data structure, the first element added is the first one to be removed. That’s how a queue works in programming too.
+
+<img
+  src="/images/queue.png"
+  alt="Queue Pn"
+  title="Queue Pn"
+  className="mx-auto"
+  style={{ width:"73%" }}
+/>
+
+**The main operations on a queue are:**
+
+- **Enqueue**: Adds an element to the back (or "rear") of the queue.
+- **Dequeue**: Removes the element from the front of the queue.
+
+```python
+from collections import deque
+
+# Create an empty queue
+queue = deque()
+
+# Enqueue (add to end)
+queue.append("Task 1")
+queue.append("Task 2")
+queue.append("Task 3")
+
+print("Queue:", queue)
+
+# Dequeue (remove from front)
+first_task = queue.popleft()
+print("Dequeued:", first_task)
+print("Queue after dequeue:", queue)
+```
+
+| Use Case                   |                                                             |
+| :------------------------- | :---------------------------------------------------------- |
+| **Print Queue**            | Documents are printed in the order they were added          |
+| **Task Scheduling**        | OS or threads manage jobs/tasks using queues                |
+| **Call Center Systems**    | Incoming calls are held in a queue                          |
+| **Data Streaming**         | Real-time processing of messages/events                     |
+| **Keyboard/Input Buffers** | Characters typed by users are stored and processed in order |
+
+https://en.wikipedia.org/wiki/Queue\\\_(abstract_data_type)
