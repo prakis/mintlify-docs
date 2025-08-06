@@ -30,7 +30,7 @@
           {
             "group": "Advanced",
             "pages": [
-              "essentials/settings",
+              "advanced/intro",
               "essentials/navigation"
             ]
           }         
