@@ -42,8 +42,8 @@
     }
   },
   "logo": {
-    "light": "/dna-logo-transparent-text-black.png",
-    "dark": "/dna-logo-transparent-text-white.png"
+    "light": "/images/dna-logo-transparent-text-black.png",
+    "dark": "/images/dna-logo-transparent-text-white.png"
   },
   "navbar": {
     "links": [

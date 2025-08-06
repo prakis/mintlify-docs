@@ -1,0 +1,40 @@
+---
+title: "Stack"
+description: "A stack is a linear data structure that follows the Last In, First Out (LIFO) principle."
+---
+
+### Real-World Analogy: Stack of Plates
+
+Imagine a stack of plates: you can only add a new plate to the top, and you can only take a plate from the top. The last plate you put on is the first one you take off. Like a stack of plates or books.
+
+### Key Operations:
+
+- **Push:** Adds an element to the top of the stack.
+- **Pop:** Removes and returns the element at the top of the stack.
+
+```python
+# A simple implementation of a stack using a Python list
+
+# Create an empty list to represent the stack
+stack = []
+
+# Push elements onto the stack (like adding plates to the top)
+print("Pushing elements onto the stack:")
+stack.append('A')  # Push 'A'
+stack.append('B')  # Push 'B'
+stack.append('C')  # Push 'C'
+
+# The last element in the list is the top of the stack
+
+# Pop elements from the stack (like taking plates from the top)
+
+popped_element = stack.pop()  # Pop 'C'
+popped_element = stack.pop()  # Pop 'B'
+popped_element = stack.pop()  # Pop 'A'
+
+# Stack is now empty, after all elements are removed(pop)
+```
+
+**Usecase:** The "undo" feature in a text editor or a word processor is a perfect example of a stack. Every time you type a character or perform an action (like deleting a word), that action is "pushed" onto a stack. When you click "undo," the most recent action is "popped" off the stack and reversed. If you keep clicking "undo," you'll reverse the actions in the exact reverse order of how you performed them—the last action you did is the first one to be undone.
+
+Another good usecase is Navigating backward in a browser.  Every website you visit added to the browser history stack.
