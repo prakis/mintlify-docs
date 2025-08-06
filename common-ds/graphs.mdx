@@ -1,5 +1,44 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: "Graph"
+description: "A graph is a non-linear data structure that consists of a set of vertices (or nodes) and a set of edges that connect them.  Unlike a tree, which has a hierarchical structure, a graph can have any number of connections between nodes, including cycles (where you can return to a starting node by following the edges)."
 ---
 
+Imagine you have a map where:
+
+- Each **city** is a **node**.
+- Each **road** between cities is an **edge**.
+- If the road is one-way, it's a **directed edge**.
+- Distance of the road can be it's **weight**.
+
+You could represent this graph as
+
+```
+City-A ---10km---> City-B
+City-A ---5km---> City-C
+City-B ---7km---> City-C
+```
+
+This graph helps answer questions like:
+
+- What’s the shortest path from City-A to City-C?
+- Which cities can you reach from a starting point?
+
+### **Key Concepts**
+
+A **graph** is a data structure that consists of Nodes(Vertex) and Edges.
+
+- **Vertex (Node)**: A fundamental unit of the graph. It can hold data or simply represent a point.
+- **Edge**: A connection between two vertices. Edges can be **directed** (pointing from one vertex to another, like a one-way street) or **undirected** (bidirectional, like a two-way street).
+- **Path**: A sequence of vertices connected by edges.
+- **Cycle**: A path that starts and ends at the same vertex.
+- **Weighted Graph**: A graph where each edge has a numerical value (a "weight" or "cost") associated with it, often representing distance, time, or cost.
+
+### Common Real-World Examples:
+
+- **Social Networks**: Social media platforms like Facebook and Twitter are a perfect example. Each person is a **vertex**, and the friendships or followings are **edges**. This structure allows for analyzing social connections, finding mutual friends, and suggesting new connections.
+- **Navigation and GPS**: GPS systems use graphs to represent road networks. Cities or intersections are **vertices**, and the roads connecting them are **edges**. The weight of each edge can be the distance or travel time, allowing algorithms like Dijkstra's to find the shortest or fastest route.
+- **The Internet**: The World Wide Web itself can be viewed as a graph, where webpages are **vertices** and the hyperlinks between them are **directed edges**. Search engines use this graph structure to rank webpages based on their connections and importance.
+- **Circuit Design**: In electrical engineering, graphs can model circuits. Components are **vertices**, and the wires connecting them are **edges**. This helps in analyzing circuit flow and identifying potential design flaws.
+- **Flight networks**: Airports as nodes, flights as edges with weights (price, duration).
+
+https://en.wikipedia.org/wiki/Graph\_(abstract_data_type)
