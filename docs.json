@@ -14,7 +14,7 @@
         "tab": "Intro",
         "groups": [
           {
-            "group": "Common Datastructures",
+            "group": "Common",
             "pages": [
               "index",
               "array",
@@ -54,8 +54,8 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "Github",
+        "href": "https://github.com/prakis/datastructures"
       }
     ],
     "primary": {
@@ -67,7 +67,7 @@
   "footer": {
     "socials": {
       "x": "https://x.com/prakis",
-      "github": "https://github.com/prakis/",
+      "github": "https://github.com/prakis/datastructures",
       "linkedin": "https://linkedin.com/company/mintlify"
     }
   }
