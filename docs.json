@@ -30,8 +30,7 @@
           {
             "group": "Advanced",
             "pages": [
-              "advanced/intro",
-              "essentials/navigation"
+              "advanced/intro"
             ]
           }         
         ]
@@ -39,11 +38,6 @@
     ],
     "global": {
       "anchors": [
-        {
-          "anchor": "introduction",
-          "href": "https://datastructures.org",
-          "icon": "/images/dna.png"
-        }
       ]
     }
   },
